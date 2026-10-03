@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Tavin Fitness – Sousas, Campinas</title>
+<meta name="description" content="Gym Tavin Fitness, academia em Sousas, Campinas. Treino no celular, acompanhado pelo professor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="#"><span class="logo">GT</span><span>Gym Tavin Fitness</span></a>
+  <nav id="menu-site" class="menu">
+    <a href="#modalidades">Modalidades</a><a href="#guia">Guia de treino</a><a href="#como-funciona">Como funciona</a><a href="#contato">Contato</a>
+  </nav>
+  <div id="usuario" hidden><span id="nome-usuario"></span><button id="sair" class="btn-link">Sair</button></div>
+</header>
+
+<!-- ===== SITE PÚBLICO ===== -->
+<div id="site">
+  <section class="hero">
+    <div class="hero-texto">
+      <h1>Gym Tavin Fitness</h1>
+      <p class="sub">Sua academia em Sousas, Campinas. Treino na palma da mão, acompanhado de perto pelo professor.</p>
+      <div class="botoes">
+        <a class="btn" href="https://wa.me/5519997045058" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-claro" href="#modalidades">Conhecer modalidades</a>
+      </div>
+    </div>
+
+    <!-- LOGIN / CADASTRO (telas separadas) -->
+    <section id="auth" class="caixa">
+      <div id="tela-login">
+        <h2>Área do aluno</h2>
+        <form id="form-login">
+          <label>E-mail<input type="email" name="email" required></label>
+          <label>Senha<input type="password" name="senha" required></label>
+          <button class="btn">Entrar</button>
+        </form>
+        <p class="troca">Ainda não tem conta? <button type="button" class="btn-link" data-ir="cadastro">Criar conta</button></p>
+      </div>
+      <div id="tela-cadastro" hidden>
+        <h2>Criar conta</h2>
+        <form id="form-cadastro">
+          <label>Nome<input name="nome" required></label>
+          <label>E-mail<input type="email" name="email" required></label>
+          <label>Senha (mín. 6 caracteres)<input type="password" name="senha" minlength="6" required></label>
+          <button class="btn">Criar conta</button>
+        </form>
+        <p class="troca">Já tem conta? <button type="button" class="btn-link" data-ir="login">Entrar</button></p>
+      </div>
+      <p id="msg" class="msg"></p>
+    </section>
+  </section>
+
+  <section id="modalidades" class="secao">
+    <h2>Modalidades e serviços</h2>
+    <div class="cards">
+      <article class="item"><div class="foto" style="--img:url(img/musculacao.jpg)"></div><h3>Musculação</h3><p>Equipamentos para ganhar força e massa com orientação.</p></article>
+      <article class="item"><div class="foto" style="--img:url(img/funcional.jpg)"></div><h3>Funcional</h3><p>Treinos dinâmicos que melhoram condicionamento e mobilidade.</p></article>
+      <article class="item"><div class="foto" style="--img:url(img/spinning.jpg)"></div><h3>Spinning</h3><p>Aulas em grupo com ritmo forte para queimar energia.</p></article>
+      <article class="item"><div class="foto" style="--img:url(img/personalizado.jpg)"></div><h3>Treino personalizado</h3><p>Ficha montada pelo professor para o seu objetivo.</p></article>
+      <article class="item"><div class="foto" style="--img:url(img/avaliacao.jpg)"></div><h3>Avaliação física</h3><p>Acompanhe sua evolução com medidas e metas.</p></article>
+      <article class="item"><div class="foto" style="--img:url(img/coletivas.jpg)"></div><h3>Aulas coletivas</h3><p>Treine com a turma e mantenha a motivação.</p></article>
+    </div>
+  </section>
+
+  <section id="guia" class="secao">
+    <h2>Guia rápido de treino</h2>
+    <div id="guia-lista" class="dicas"></div>
+  </section>
+
+  <section id="como-funciona" class="secao escura">
+    <h2>Seu treino no celular</h2>
+    <ol class="passos">
+      <li><b>Crie sua conta</b><span>Cadastro rápido, direto pelo site.</span></li>
+      <li><b>Receba seu treino</b><span>O professor monta sua ficha e você vê na hora.</span></li>
+      <li><b>Marque o que fez</b><span>Acompanhe seu progresso a cada exercício.</span></li>
+    </ol>
+  </section>
+
+  <section id="contato" class="secao">
+    <h2>Venha treinar</h2>
+    <div class="contato">
+      <p><b>Onde estamos</b><br>Sousas, Campinas – SP</p>
+      <p><b>WhatsApp</b><br>(19) 99704-5058</p>
+      <div class="botoes">
+        <a class="btn" href="https://wa.me/5519997045058" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn-sec" href="https://www.google.com/maps/search/?api=1&query=Gym+Tavin+Fitness+Sousas+Campinas" target="_blank" rel="noopener">Ver no mapa</a>
+      </div>
+    </div>
+  </section>
+  <footer class="rodape">© 2026 Gym Tavin Fitness · Sousas, Campinas</footer>
+</div>
+
+<div id="banner" class="banner" hidden></div>
+
+<!-- ===== ÁREA DO ALUNO ===== -->
+<main class="app">
+  <section id="area-aluno" hidden>
+    <nav class="abas">
+      <button class="aba ativa" data-painel="aluno-inicio"<span>🏠</span>Início</button>
+      <button class="aba" data-painel="aluno-treino"<span>🏋️</span>Treino</button>
+      <button class="aba" data-painel="aluno-horarios"<span>🕐</span>Horários</button>
+      <button class="aba" data-painel="aluno-dicas"<span>💡</span>Dicas</button>
+      <button class="aba" data-painel="aluno-contato"<span>💬</span>Contato</button>
+    </nav>
+    <div id="aluno-inicio" class="painel"></div>
+    <div id="aluno-treino" class="painel" hidden></div>
+    <div id="aluno-horarios" class="painel" hidden></div>
+    <div id="aluno-dicas" class="painel" hidden></div>
+    <div id="aluno-contato" class="painel" hidden>
+      <div class="cartao"><h2>Fale com a academia</h2>
+        <p>Dúvidas sobre treino, horários ou planos? Chame a gente.</p><br>
+        <a class="btn" href="https://wa.me/5519997045058" target="_blank" rel="noopener">WhatsApp (19) 99704-5058</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAINEL DO PROFESSOR ===== -->
+  <section id="area-prof" hidden>
+    <nav class="abas">
+      <button class="aba ativa" data-painel="prof-resumo"<span>📊</span>Resumo</button>
+      <button class="aba" data-painel="prof-alunos"<span>👥</span>Alunos</button>
+      <button class="aba" data-painel="prof-treino"<span>📋</span>Treinos</button>
+    </nav>
+    <div id="prof-resumo" class="painel"></div>
+    <div id="prof-alunos" class="painel" hidden></div>
+    <div id="prof-treino" class="painel" hidden></div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
